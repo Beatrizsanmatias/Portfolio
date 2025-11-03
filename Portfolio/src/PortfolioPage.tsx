@@ -1,5 +1,15 @@
 import "./PortfolioPage.css";
 import { useEffect } from "react";
+import { LuGithub, LuLinkedin, LuMail } from "react-icons/lu";
+import html from "./icons/html_icon.png";
+import css from "./icons/css_icon.png";
+import figma from "./icons/figma_icon.png";
+import react from "./icons/react_icon.png";
+import node from "./icons/nodeJs_icon.png";
+import vscode from "./icons/vsCode_icon.png";
+import tailwind from "./icons/tailwind_icon.png";
+import ts from "./icons/ts_icon.png";
+import ScrollToTop from "./ScrollToTop";
 
 export default function PortfolioPage() {
   useEffect(() => {
@@ -49,7 +59,7 @@ export default function PortfolioPage() {
             <a href="#home">Home</a>
           </li>
           <li>
-            <a href="#skills">About</a>
+            <a href="#about">About</a>
           </li>
           <li>
             <a href="#projects">Projects</a>
@@ -65,13 +75,10 @@ export default function PortfolioPage() {
         <div className="organic-shape shape1"></div>
         <div className="organic-shape shape2"></div>
         <div className="organic-shape shape3"></div>
-        <div className="leaf-decoration leaf1">🍃</div>
-        <div className="leaf-decoration leaf2">🌿</div>
-        <div className="leaf-decoration leaf3">🍂</div>
 
         <div className="hero-content">
           <h1>
-            Hello, I'm <strong>Beatriz Matias</strong>
+            Hello, I'm <strong>Beatriz Matias 🍂</strong>
           </h1>
           <p>
             A frontend developer from Portugal who believes in creating digital
@@ -84,8 +91,55 @@ export default function PortfolioPage() {
         </div>
       </section>
 
+      <section className="about" id="about">
+        <h2>About Me 🌿</h2>
+        <p className="section-subtitle">
+          I’m a front-end developer who loves bringing ideas to life through
+          thoughtful, intuitive design. What inspires me most is turning
+          something that starts as a thought into a real, interactive experience
+          people can connect with. I’m always looking for new challenges that
+          push me to grow, whether it’s learning a new framework or
+          collaborating with others to build something meaningful.
+        </p>
+
+        <h3>My Skills 🍁</h3>
+        <div className="about-grid">
+          <div className="skill">
+            <img src={html} alt="HTML icon" className="icon-img" />
+          </div>
+          <div className="skill">
+            {" "}
+            <img src={css} alt="CSS icon" className="icon-img" />
+          </div>
+          <div className="skill">
+            {" "}
+            <img src={react} alt="React.js icon" className="icon-img" />
+          </div>
+          <div className="skill dif">
+            {" "}
+            <img src={tailwind} alt="Tailwind icon" className="icon-img" />
+          </div>
+          <div className="skill">
+            {" "}
+            <img src={ts} alt="TypeScript icon" className="icon-img" />
+          </div>
+          <div className="skill">
+            {" "}
+            <img src={vscode} alt="VSCode icon" className="icon-img" />
+          </div>
+          <div className="skill">
+            {" "}
+            <img src={figma} alt="Figma icon" className="icon-img" />
+          </div>
+          <div className="skill">
+            {" "}
+            <img src={node} alt="Node.js icon" className="icon-img" />
+          </div>
+        </div>
+      </section>
+
       <section className="projects" id="projects">
-        <h2> Projects</h2>
+        <h2> Projects 🍃</h2>
         <p className="section-subtitle">
           Crafted with care and attention to detail
         </p>
@@ -130,65 +184,37 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      <section className="skills" id="skills">
-        <h2>Skills & Expertise</h2>
-        <p className="section-subtitle">Tools I use to bring ideas to life</p>
-        <div className="skills-grid">
-          <div className="skill-item">
-            <div className="skill-icon">⚛️</div>
-            <h3>React</h3>
-          </div>
-          <div className="skill-item">
-            <div className="skill-icon">🎨</div>
-            <h3>CSS/SASS</h3>
-          </div>
-          <div className="skill-item">
-            <div className="skill-icon">⚡</div>
-            <h3>JavaScript</h3>
-          </div>
-          <div className="skill-item">
-            <div className="skill-icon">📱</div>
-            <h3>Responsive</h3>
-          </div>
-          <div className="skill-item">
-            <div className="skill-icon">🔷</div>
-            <h3>TypeScript</h3>
-          </div>
-          <div className="skill-item">
-            <div className="skill-icon">♿</div>
-            <h3>Accessibility</h3>
-          </div>
-        </div>
-      </section>
-
       <section className="contact" id="contact">
         <div className="contact-content">
-          <h2>Get In Touch!</h2>
+          <h2>Get In Touch! ☘️</h2>
           <p>
             I'm always open to discussing new projects, creative ideas, or
             opportunities to be part of your vision.
           </p>
           <div className="contact-links">
             <a href="mailto:biasmatias99@gmail.com" className="contact-link">
-              Send Email
+              <LuMail size={30} />
             </a>
             <a
               href="https://github.com/Beatrizsanmatias"
               className="contact-link"
               target="_blank"
             >
-              GitHub
+              <LuGithub size={30} />
             </a>
             <a
               href="https://www.linkedin.com/in/beatriz-matias-830259236/"
               className="contact-link"
               target="_blank"
             >
-              LinkedIn
+              <LuLinkedin size={30} />
             </a>
           </div>
         </div>
       </section>
+      <div>
+        <ScrollToTop />
+      </div>
     </div>
   );
 }
