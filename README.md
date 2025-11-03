@@ -31,20 +31,20 @@ Built with **React**, this site highlights my projects, skills, and contact link
 To run this project locally:
 
 
-# Clone this repository
+Clone this repository
 ```bash
 git clone https://github.com/Beatrizsanmatias/portfolio.git
 ```
 
-# Navigate to the project folder
+Navigate to the project folder
 ```bash
 cd portfolio
 ```
-# Install dependencies
+Install dependencies
 ```bash
 npm install
 ```
-# Start the development server
+Start the development server
 ```bash
 npm start
 ```
