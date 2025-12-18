@@ -189,11 +189,14 @@ h2 {
 
 .about-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  width: 100%;
-  justify-items: center;
-  align-items: start;
   margin-top: 16px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 32px;
+  justify-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-left: 200px;
+  padding-right: 200px;
 }
 
 .icon-img {
@@ -206,7 +209,7 @@ h2 {
   padding-left: 24px;
   padding-right: 24px;
   padding-bottom: 16px;
-  background: #f5f3ec;
+  background: #efece0;
   border-radius: 16px;
   border: 2px solid #fff;
 }
@@ -216,9 +219,31 @@ h2 {
   padding-left: 24px;
   padding-right: 24px;
   padding-bottom: 27px;
-  background: #f5f3ec;
+  background: #efece0;
   border: 2px solid #fff;
   border-radius: 16px;
+}
+
+.about-grid-two {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  margin-top: 24px;
+  gap: 64px;
+  justify-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.about-grid-two .skill {
+  padding-top: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 16px;
+  background: #efece0;
+  border-radius: 16px;
+  border: 2px solid #fff;
 }
 
 .projects-grid {
@@ -256,7 +281,6 @@ h2 {
 }
 
 .project-card:hover {
-  transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(74, 103, 65, 0.15);
   border-color: #8b9d77;
 }
@@ -283,24 +307,58 @@ h2 {
 
 .tag {
   padding: 8px 19px;
-  background: #e8dcc4;
+  background: #f5e9d3;
   border: 1px solid #c17b4d;
   border-radius: 25px;
   font-size: 14px;
-  color: #5a5a4a;
+  color: #c17b4d;
+  font-weight: 600;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.video-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.video-modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 80%;
+}
+
+.video-modal-content video {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+.close-video-button {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #c17b4d;
+  color: #fff;
+  border: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .about {
   background: #f5f1e8;
   flex-direction: column;
-}
-
-.about-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 32px;
-  width: 100%;
 }
 
 .skill-item {

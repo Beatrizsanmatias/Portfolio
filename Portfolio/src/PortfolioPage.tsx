@@ -1,15 +1,16 @@
-import "./PortfolioPage.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { LuGithub, LuLinkedin, LuMail } from "react-icons/lu";
-import html from "./icons/html_icon.png";
 import css from "./icons/css_icon.png";
 import figma from "./icons/figma_icon.png";
+import html from "./icons/html_icon.png";
 import react from "./icons/react_icon.png";
-import node from "./icons/nodeJs_icon.png";
-import vscode from "./icons/vsCode_icon.png";
 import tailwind from "./icons/tailwind_icon.png";
 import ts from "./icons/ts_icon.png";
+import vscode from "./icons/vsCode_icon.png";
+import "./PortfolioPage.css";
 import ScrollToTop from "./ScrollToTop";
+import mija from "./videos/mija - preview.mp4";
+import calendar from "./videos/calendar - preview.mp4";
 
 export default function PortfolioPage() {
   useEffect(() => {
@@ -50,6 +51,8 @@ export default function PortfolioPage() {
     });
   }, []);
 
+  const [activeVideo, setActiveVideo] = useState<string | null>(null);
+
   return (
     <div>
       <nav>
@@ -66,7 +69,7 @@ export default function PortfolioPage() {
           </li>
 
           <li>
-            <a href="#contact">Contact</a>
+            <a href="#contact">Contacts</a>
           </li>
         </ul>
       </nav>
@@ -123,6 +126,11 @@ export default function PortfolioPage() {
             {" "}
             <img src={ts} alt="TypeScript icon" className="icon-img" />
           </div>
+        </div>
+        <div className="about-grid-two">
+          <div className=""> </div>
+          <div className=""> </div>
+          <div className=""> </div>
           <div className="skill">
             {" "}
             <img src={vscode} alt="VSCode icon" className="icon-img" />
@@ -131,10 +139,9 @@ export default function PortfolioPage() {
             {" "}
             <img src={figma} alt="Figma icon" className="icon-img" />
           </div>
-          <div className="skill">
-            {" "}
-            <img src={node} alt="Node.js icon" className="icon-img" />
-          </div>
+          <div className=""> </div>
+          <div className=""> </div>
+          <div className=""> </div>
         </div>
       </section>
 
@@ -145,42 +152,81 @@ export default function PortfolioPage() {
         </p>
         <div className="projects-grid">
           <div className="project-card">
-            <h3>Sustainable Shopping App</h3>
+            <h3>Sol e Chuva</h3>
             <p>
-              An eco-conscious e-commerce platform helping users make
-              environmentally friendly purchasing decisions with carbon
-              footprint tracking.
+              A web/mobile app that provides real-time weather forecasts for
+              Portugal, allows location searches, and displays conditions in a
+              responsive, user-friendly interface.
             </p>
             <div className="tags">
               <span className="tag">React</span>
               <span className="tag">TypeScript</span>
-              <span className="tag">Node.js</span>
+              <span className="tag">CSS</span>
+              <span className="tag">IPMA API</span>
             </div>
           </div>
-          <div className="project-card">
-            <h3>Wellness Tracker</h3>
+          <div
+            className="project-card"
+            onClick={() => setActiveVideo(calendar)}
+          >
+            <h3>Interactive Calendar</h3>
             <p>
-              A mindful health and wellness dashboard that focuses on holistic
-              well-being with gentle reminders and calming visualizations.
+              Interactive calendar web application that allows users to create,
+              view, manage, and receive reminders for personal events through an
+              intuitive UI.
             </p>
             <div className="tags">
-              <span className="tag">Vue.js</span>
-              <span className="tag">Chart.js</span>
-              <span className="tag">Firebase</span>
-            </div>
-          </div>
-          <div className="project-card">
-            <h3>Garden Planning Tool</h3>
-            <p>
-              Interactive gardening companion that helps users plan seasonal
-              planting with weather integration and community knowledge sharing.
-            </p>
-            <div className="tags">
+              <span className="tag">React</span>
+              <span className="tag">TypeScript</span>
+              <span className="tag">CSS</span>
+              <span className="tag">Lucide React</span>
               <span className="tag">JavaScript</span>
-              <span className="tag">Leaflet</span>
-              <span className="tag">API</span>
             </div>
           </div>
+
+          <div className="project-card" onClick={() => setActiveVideo(mija)}>
+            <h3>Toilet Finder</h3>
+            <p>
+              A mobile/web app that helps users to locate public restrooms, mark
+              favorites, leave reviews, purchase subscription, and explore
+              aesthetic bathroom designs in a gallery.
+            </p>
+            <div className="tags">
+              <span className="tag">React</span>
+              <span className="tag">TypeScript</span>
+              <span className="tag">CSS</span>
+              <span className="tag">APIs</span>
+              <span className="tag">Figma</span>
+            </div>
+          </div>
+
+          {activeVideo && (
+            <div
+              className="video-modal-overlay"
+              onClick={() => setActiveVideo(null)}
+            >
+              <div
+                className="video-modal-content"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <video
+                  controls
+                  autoPlay
+                  loop
+                  style={{ width: "800px", borderRadius: "12px" }}
+                >
+                  <source src={activeVideo} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <button
+                  className="close-video-button"
+                  onClick={() => setActiveVideo(null)}
+                >
+                  ×
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
@@ -188,8 +234,8 @@ export default function PortfolioPage() {
         <div className="contact-content">
           <h2>Get In Touch! ☘️</h2>
           <p>
-            I'm always open to discussing new projects, creative ideas, or
-            opportunities to be part of your vision.
+            I’m always looking for the next challenge. Think we’d make a great
+            team? Reach out and let’s make it happen.
           </p>
           <div className="contact-links">
             <a href="mailto:biasmatias99@gmail.com" className="contact-link">
