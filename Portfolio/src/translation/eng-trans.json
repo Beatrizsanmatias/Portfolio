@@ -1,0 +1,37 @@
+{
+  "cover": {
+    "title": "Hello, I'm Beatriz Matias",
+    "subtitle": "A frontend developer from Portugal who believes in creating digital experiences that feel as natural and intuitive as the world around us",
+    "button": "Explore My Projects"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contacts": "Contacts"
+  },
+  "about": {
+    "title": "About Me",
+    "text": "Front-end developer who loves bringing ideas to life through thoughtful, intuitive design. What inspires me most is turning something that starts as a thought into a real, interactive experience people can connect with. I’m always looking for new challenges that push me to grow, whether it’s learning a new framework or collaborating with others to build something meaningful.",
+    "skills": "My Skills"
+  },
+  "projects": {
+    "title": "Projects",
+    "Sol": {
+      "title": "Interactive Calendar",
+      "subtitle": "Interactive calendar web application that allows users to create, view, manage, and receive reminders for personal events through an intuitive UI."
+    },
+    "Calendar": {
+      "title": "Interactive Calendar",
+      "subtitle": "Interactive calendar web application that allows users to create, view, manage, and receive reminders for personal events through an intuitive UI."
+    },
+    "Toilet": {
+      "title": "Interactive Calendar",
+      "subtitle": "  A mobile/web app that helps users to locate public restrooms, mark favorites, leave reviews, purchase subscription, and explore aesthetic bathroom designs in a gallery."
+    }
+  },
+  "contacts": {
+    "title": "Get In Touch!",
+    "subtitle": "I’m always looking for the next challenge. Think we’d make a great team? Reach out and let’s make it happen."
+  }
+}
