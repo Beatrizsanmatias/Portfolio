@@ -1,0 +1,41 @@
+{
+  "cover": {
+    "title": "Olá, sou Beatriz Matias",
+    "subtitle": "Uma programadora front-end de Portugal que acredita na criação de experiências digitais tão naturais e intuitivas quanto o mundo à nossa volta",
+    "button": "Explore os meus projetos"
+  },
+  "nav": {
+    "home": "Página inicial",
+    "about": "Sobre",
+    "projects": "Projetos",
+    "contacts": "Contactos"
+  },
+  "about": {
+    "title": "Sobre mim",
+    "text": "Desenvolvedor front-end que adora dar vida a ideias através de um design intuitivo e bem pensado. O que mais me inspira é transformar algo que começa como um pensamento numa experiência real e interativa com a qual as pessoas se podem conectar. Estou sempre à procura de novos desafios que me levem a crescer, seja aprendendo uma nova estrutura ou colaborando com outras pessoas para construir algo significativo.",
+    "skills": "As minhas competências"
+  },
+  "projects": {
+    "title": "Projetos",
+    "Sol": {
+      "title": "Calendário interativo",
+      "subtitle": "Aplicação web de calendário interativo que permite aos utilizadores criar, visualizar, gerir e receber lembretes para eventos pessoais através de uma interface intuitiva."
+    },
+    "Calendar": {
+      "título": "Calendário interativo",
+      "subtítulo": "Aplicação web de calendário interativo que permite aos utilizadores criar, visualizar, gerir e receber lembretes para eventos pessoais através de uma interface intuitiva."
+    },
+    "Toilet": {
+      "title": "Calendário interativo",
+      "subtitle": "  Uma aplicação móvel/web que ajuda os utilizadores a localizar casas de banho públicas, marcar favoritas, deixar comentários, adquirir assinaturas e explorar designs estéticos de casas de banho numa galeria."
+    }
+  },
+  "contacts": {
+    "title": "Entre em contacto!",
+    "subtitle": "Estou sempre à procura do próximo desafio. Acha que formaríamos uma ótima equipa? Entre em contacto e vamos tornar isso realidade."
+  },
+  "trans": {
+    "pt": "PT",
+    "en": "EN"
+  }
+}

@@ -165,13 +165,12 @@ section {
 
 .projects {
   background: linear-gradient(180deg, #f5f1e8 0%, #e8dcc4 100%);
-
   flex-direction: column;
 }
 
 h2 {
   font-size: 56px;
-  margin-bottom: 16px;
+  margin-bottom: 30px;
   text-align: center;
   color: #4a6741;
   font-weight: 300;
@@ -209,9 +208,9 @@ h2 {
   padding-left: 24px;
   padding-right: 24px;
   padding-bottom: 16px;
-  background: #efece0;
-  border-radius: 16px;
-  border: 2px solid #fff;
+  background: #abc0934e;
+  border-radius: 50%;
+  border: 3px solid #fff;
 }
 
 .about-grid .skill.dif {
@@ -219,9 +218,9 @@ h2 {
   padding-left: 24px;
   padding-right: 24px;
   padding-bottom: 27px;
-  background: #efece0;
-  border: 2px solid #fff;
-  border-radius: 16px;
+  background: #abc0934e;
+  border: 3px solid #fff;
+  border-radius: 50%;
 }
 
 .about-grid-two {
@@ -241,9 +240,9 @@ h2 {
   padding-left: 24px;
   padding-right: 24px;
   padding-bottom: 16px;
-  background: #efece0;
-  border-radius: 16px;
-  border: 2px solid #fff;
+  background: #abc0934e;
+  border-radius: 50%;
+  border: 3px solid #fff;
 }
 
 .projects-grid {
@@ -350,7 +349,7 @@ h2 {
   border: none;
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 16px;
+  padding-top: 12px;
   padding-bottom: 16px;
   border-radius: 50%;
   cursor: pointer;
@@ -429,6 +428,35 @@ h2 {
   color: #fff;
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(74, 103, 65, 0.2);
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: 3px solid;
+  white-space: nowrap;
+  width: fit-content;
+  animation:
+    typing 2s steps(18, end) forwards,
+    blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: currentColor;
+  }
 }
 
 .about h3 {

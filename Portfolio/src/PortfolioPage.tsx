@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
-import { LuGithub, LuLinkedin, LuMail } from "react-icons/lu";
+import Linkedin from "./icons/linkedin.svg";
+import Mail from "./icons/mail.svg";
+import Github from "./icons/github.svg";
 import css from "./icons/css_icon.png";
 import figma from "./icons/figma_icon.png";
 import html from "./icons/html_icon.png";
@@ -19,7 +21,7 @@ export default function PortfolioPage() {
       anchor.addEventListener("click", (e) => {
         e.preventDefault();
         const target = document.querySelector(
-          anchor.getAttribute("href") || ""
+          anchor.getAttribute("href") || "",
         );
         if (target)
           target.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -36,7 +38,7 @@ export default function PortfolioPage() {
         if (entry.isIntersecting) {
           entry.target.setAttribute(
             "style",
-            "opacity:1; transform:translateY(0)"
+            "opacity:1; transform:translateY(0)",
           );
         }
       });
@@ -45,7 +47,7 @@ export default function PortfolioPage() {
     document.querySelectorAll(".project-card, .skill-item").forEach((el) => {
       el.setAttribute(
         "style",
-        "opacity:0; transform:translateY(30px); transition:opacity 0.8s ease, transform 0.8s ease"
+        "opacity:0; transform:translateY(30px); transition:opacity 0.8s ease, transform 0.8s ease",
       );
       observer.observe(el);
     });
@@ -67,7 +69,6 @@ export default function PortfolioPage() {
           <li>
             <a href="#projects">Projects</a>
           </li>
-
           <li>
             <a href="#contact">Contacts</a>
           </li>
@@ -75,12 +76,11 @@ export default function PortfolioPage() {
       </nav>
 
       <section className="hero" id="home">
-        <div className="organic-shape shape1"></div>
         <div className="organic-shape shape2"></div>
         <div className="organic-shape shape3"></div>
 
         <div className="hero-content">
-          <h1>
+          <h1 className="typewriter">
             Hello, I'm <strong>Beatriz Matias 🍂</strong>
           </h1>
           <p>
@@ -105,7 +105,7 @@ export default function PortfolioPage() {
           collaborating with others to build something meaningful.
         </p>
 
-        <h3>My Skills 🍁</h3>
+        <h3>My Skills</h3>
         <div className="about-grid">
           <div className="skill">
             <img src={html} alt="HTML icon" className="icon-img" />
@@ -147,9 +147,7 @@ export default function PortfolioPage() {
 
       <section className="projects" id="projects">
         <h2> Projects 🍃</h2>
-        <p className="section-subtitle">
-          Crafted with care and attention to detail
-        </p>
+
         <div className="projects-grid">
           <div className="project-card">
             <h3>Sol e Chuva</h3>
@@ -233,27 +231,35 @@ export default function PortfolioPage() {
       <section className="contact" id="contact">
         <div className="contact-content">
           <h2>Get In Touch! ☘️</h2>
-          <p>
-            I’m always looking for the next challenge. Think we’d make a great
-            team? Reach out and let’s make it happen.
-          </p>
           <div className="contact-links">
             <a href="mailto:biasmatias99@gmail.com" className="contact-link">
-              <LuMail size={30} />
+              <img
+                src={Mail}
+                alt="Mail icon"
+                style={{ width: "30px", height: "30px" }}
+              />
             </a>
             <a
               href="https://github.com/Beatrizsanmatias"
               className="contact-link"
               target="_blank"
             >
-              <LuGithub size={30} />
+              <img
+                src={Github}
+                alt="Github icon"
+                style={{ width: "30px", height: "30px" }}
+              />
             </a>
             <a
               href="https://www.linkedin.com/in/beatriz-matias-830259236/"
               className="contact-link"
               target="_blank"
             >
-              <LuLinkedin size={30} />
+              <img
+                src={Linkedin}
+                alt="Linkedin icon"
+                style={{ width: "30px", height: "30px" }}
+              />
             </a>
           </div>
         </div>

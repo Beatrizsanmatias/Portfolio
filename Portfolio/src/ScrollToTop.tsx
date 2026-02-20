@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { LuArrowUp } from "react-icons/lu";
+import ArrowUp from "./icons/arrowUp.svg";
 
 export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
@@ -23,7 +23,11 @@ export default function ScrollToTop() {
       className={`scroll-to-top ${isVisible ? "show" : ""}`}
       aria-label="Scroll to top"
     >
-      <LuArrowUp size={20} />
+      <img
+        src={ArrowUp}
+        alt="Arrow up icon"
+        style={{ width: "20px", height: "20px" }}
+      />
     </button>
   );
 }
