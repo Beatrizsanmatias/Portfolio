@@ -150,6 +150,17 @@ export default function PortfolioPage() {
 
         <div className="projects-grid">
           <div className="project-card">
+            <h3>Employee Dashboard</h3>
+            <p>A ....</p>
+            <div className="tags">
+              <span className="tag">HTML</span>
+              <span className="tag">CSS</span>
+              <span className="tag">JavaScript</span>
+              <span className="tag">Ant Design</span>
+            </div>
+          </div>
+          {/*}
+             <div className="project-card">
             <h3>Sol e Chuva</h3>
             <p>
               A web/mobile app that provides real-time weather forecasts for
@@ -162,7 +173,8 @@ export default function PortfolioPage() {
               <span className="tag">CSS</span>
               <span className="tag">IPMA API</span>
             </div>
-          </div>
+            </div>
+            */}
           <div
             className="project-card"
             onClick={() => setActiveVideo(calendar)}
@@ -175,10 +187,10 @@ export default function PortfolioPage() {
             </p>
             <div className="tags">
               <span className="tag">React</span>
+              <span className="tag">HTML</span>
               <span className="tag">TypeScript</span>
               <span className="tag">CSS</span>
               <span className="tag">Lucide React</span>
-              <span className="tag">JavaScript</span>
             </div>
           </div>
 
@@ -191,6 +203,7 @@ export default function PortfolioPage() {
             </p>
             <div className="tags">
               <span className="tag">React</span>
+              <span className="tag">HTML</span>
               <span className="tag">TypeScript</span>
               <span className="tag">CSS</span>
               <span className="tag">APIs</span>
